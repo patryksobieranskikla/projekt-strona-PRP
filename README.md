@@ -1,4 +1,4 @@
-![Logo firmy](images/Logo PRP.png)
+![Logo firmy](images/Logo_PRP.png)
 # projekt-strona-PRP
 Strona internetowa dla projektu tłumików z tytanu firmy "Polish Racing Power-PRP"
 
