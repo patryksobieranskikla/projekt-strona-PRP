@@ -279,8 +279,8 @@ src="https://www.facebook.com/tr?id=YOUR_FACEBOOK_PIXEL_ID&ev=PageView&noscript=
                 <i class="fas fa-envelope"></i>
             </a>
 
-            <a href="https://m.me/PRPExhaust" target="_blank" class="icon messenger" title="Messenger">
-                <i class="fab fa-facebook-messenger"></i>
+            <a href="https://www.facebook.com/profile.php?id=61560966670274" target="_blank" class="icon facebook" title="Facebook">
+                <i class="fab fa-facebook"></i>
             </a>
 
             <a href="https://m.me/61560966670274" target="_blank" class="icon messenger" title="Messenger">
@@ -302,107 +302,104 @@ src="https://www.facebook.com/tr?id=YOUR_FACEBOOK_PIXEL_ID&ev=PageView&noscript=
 
     </section>
     
-
-    <!-- Stopka strony -->
-    <footer>
-        <p>&copy; 2024 PRP- Polish Racing Power - Wszystkie prawa zastrzeżone.</p>
-    </footer>
-
-    <div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 20px; right: 20px; background: #333; color: white; padding: 20px; text-align: center; z-index: 1000; border-radius: 5px;">
-        <p>Ta strona używa plików cookies, aby zapewnić Ci najlepsze doświadczenia. Kontynuując korzystanie ze strony, wyrażasz zgodę na ich użycie.</p>
-        <button onclick="acceptCookies()">Akceptuję</button>
-        <button onclick="declineCookies()">Odrzuć</button>
-    </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Pobieramy wszystkie elementy karuzeli
-            const carousels = document.querySelectorAll('.carousel');
+        <!-- Stopka strony -->
+        <footer>
+            <p>&copy; 2024 PRP- Polish Racing Power - Wszystkie prawa zastrzeżone.</p>
+        </footer>
     
-            // Funkcja uruchamiająca karuzelę dla każdego zestawu obrazów
-            carousels.forEach((carousel) => {
-                let index = 0;
-                const images = carousel.querySelectorAll('.carousel-image');
-                images[index].classList.add('active'); // Ustawiamy pierwszy obraz jako widoczny
-    
-                // Funkcja zmiany obrazu
-                setInterval(() => {
-                    images[index].classList.remove('active'); // Usuwamy klasę 'active' z bieżącego obrazu
-                    index = (index + 1) % images.length; // Przechodzimy do następnego obrazu
-                    images[index].classList.add('active'); // Dodajemy klasę 'active' do nowego obrazu
-                }, 3000); // Czas przełączania obrazów ustawiony na 3000 ms (3 sekundy)
-            });
-        });
-    </script>  
-
-<script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
-
-    menuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('show');
-    });
-</script>
-
-<script>
-    // Dodanie funkcjonalności rozwijania menu
-    document.getElementById("menu-toggle").addEventListener("click", function() {
-        document.querySelector(".nav-container").classList.toggle("active");
-    });
-</script>
-    
-<!-- Inne elementy HTML -->
-
-<script>
-    const faders = document.querySelectorAll('.fade-in');
-
-    const appearOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
-    };
-
-    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            else {
-                entry.target.classList.add('visible');
-                appearOnScroll.unobserve(entry.target);
+        <div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 20px; right: 20px; background: #333; color: white; padding: 20px; text-align: center; z-index: 1000; border-radius: 5px;">
+            <p>Ta strona używa plików cookies, aby zapewnić Ci najlepsze doświadczenia. Kontynuując korzystanie ze strony, wyrażasz zgodę na ich użycie.</p>
+            <button onclick="acceptCookies()">Akceptuję</button>
+            <button onclick="declineCookies()">Odrzuć</button>
+        </div>
+        
+        <script>
+            function acceptCookies() {
+                document.getElementById('cookie-banner').style.display = 'none';
+                localStorage.setItem('cookiesAccepted', 'true');
             }
-        });
-    }, appearOptions);
-
-    faders.forEach(fader => {
-        appearOnScroll.observe(fader);
-    });
-</script>
-
-<script>
-    document.getElementById("menu-toggle").addEventListener("click", function() {
-        document.querySelector(".nav-container").classList.toggle("active");
-    });
-</script>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Pobieramy wszystkie elementy karuzeli
-        const carousels = document.querySelectorAll('.carousel');
-
-        // Funkcja uruchamiająca karuzelę dla każdego zestawu obrazów
-        carousels.forEach((carousel) => {
-            let index = 0;
-            const images = carousel.querySelectorAll('.carousel-image');
-            images[index].classList.add('active'); // Ustawiamy pierwszy obraz jako widoczny
-
-            // Funkcja zmiany obrazu
-            setInterval(() => {
-                images[index].classList.remove('active'); // Usuwamy klasę 'active' z bieżącego obrazu
-                index = (index + 1) % images.length; // Przechodzimy do następnego obrazu
-                images[index].classList.add('active'); // Dodajemy klasę 'active' do nowego obrazu
-            }, 3000); // Czas przełączania obrazów ustawiony na 3000 ms (3 sekundy)
-        });
-    });
-</script>
-
-</body>
-
-</html>
+        
+            function declineCookies() {
+                document.getElementById('cookie-banner').style.display = 'none';
+                localStorage.setItem('cookiesAccepted', 'false');
+            }
+        
+            // Sprawdź, czy baner ciasteczek był już zaakceptowany
+            document.addEventListener("DOMContentLoaded", function() {
+                const cookiesAccepted = localStorage.getItem('cookiesAccepted');
+                if (cookiesAccepted !== 'true') {
+                    document.getElementById('cookie-banner').style.display = 'block';
+                }
+            });
+        </script>        
+    
+        <!-- Skrypt do obsługi banera cookies -->
+        <script>
+            function acceptCookies() {
+                document.getElementById('cookie-banner').style.display = 'none';
+            }
+            function declineCookies() {
+                document.getElementById('cookie-banner').style.display = 'none';
+            }
+        </script>
+    
+        <!-- Skrypt do hamburger menu -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const menuToggle = document.getElementById("menu-toggle");
+                const navContainer = document.querySelector(".nav-container");
+    
+                menuToggle.addEventListener("click", function() {
+                    navContainer.classList.toggle("active");
+                });
+            });
+        </script>
+    
+        <!-- Skrypt do animacji pojawiania się elementów -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const faders = document.querySelectorAll('.fade-in');
+    
+                const appearOptions = {
+                    threshold: 0.1,
+                    rootMargin: "0px 0px -50px 0px"
+                };
+    
+                const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+                    entries.forEach(entry => {
+                        if (!entry.isIntersecting) return;
+                        else {
+                            entry.target.classList.add('visible');
+                            appearOnScroll.unobserve(entry.target);
+                        }
+                    });
+                }, appearOptions);
+    
+                faders.forEach(fader => {
+                    appearOnScroll.observe(fader);
+                });
+            });
+        </script>
+    
+        <!-- Skrypt do karuzeli -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const carousels = document.querySelectorAll('.carousel');
+    
+                carousels.forEach((carousel) => {
+                    let index = 0;
+                    const images = carousel.querySelectorAll('.carousel-image');
+                    images[index].classList.add('active');
+    
+                    setInterval(() => {
+                        images[index].classList.remove('active');
+                        index = (index + 1) % images.length;
+                        images[index].classList.add('active');
+                    }, 3000);
+                });
+            });
+        </script>
+    
+    </body>
+    </html>
+    
