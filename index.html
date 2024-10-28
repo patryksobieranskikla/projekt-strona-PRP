@@ -164,14 +164,24 @@ src="https://www.facebook.com/tr?id=YOUR_FACEBOOK_PIXEL_ID&ev=PageView&noscript=
     <header>
         <div class="logo">
             <img src="URL_DO_LOGO" alt="Logo">
-        </div>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#products">Produkty</a>
-            <a href="#blog">Blog</a>
-            <a href="#about">O firmie</a>
-            <a href="#contact">Kontakt</a>
-        </nav>
+        </div>    
+
+<div class="nav-container">
+    <nav id="nav-menu">
+        <!-- Twoje linki nawigacyjne -->
+        <a href="#home">Home</a>
+        <a href="#products">Produkty</a>
+        <a href="#blog">Blog</a>
+        <a href="#about">O firmie</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
+</div>   
+
+<!-- Przycisk hamburger menu -->
+<div class="menu-toggle" id="menu-toggle">
+    <i class="fas fa-bars"></i>
+</div>
+
     </header>
 
     <!-- Sekcja główna z banerem i filmem -->
@@ -258,16 +268,28 @@ src="https://www.facebook.com/tr?id=YOUR_FACEBOOK_PIXEL_ID&ev=PageView&noscript=
     <section id="contact">
         <h2>Kontakt</h2>
         <p>Masz pytania? Skontaktuj się z nami:</p>
-        <div class="contact-options">
-            <a href="mailto:twoj_email@example.com">Email</a>
-            <a href="https://m.me/twoj_messenger" target="_blank">Messenger</a>
-        </div>
-        <div class="social-media">
-            <a href="https://facebook.com/twoj_profil" target="_blank">Facebook</a>
-            <a href="https://instagram.com/twoj_profil" target="_blank">Instagram</a>
-            <a href="https://youtube.com/twoj_profil" target="_blank">YouTube</a>
+        <div class="contact-icons">
+            <a href="mailto:twoj_email@example.com" class="icon email" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://m.me/twoj_messenger" target="_blank" class="icon messenger" title="Messenger">
+                <i class="fab fa-facebook-messenger"></i>
+            </a>
+            <a href="https://facebook.com/twoj_profil" target="_blank" class="icon facebook" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com/twoj_profil" target="_blank" class="icon instagram" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://youtube.com/twoj_profil" target="_blank" class="icon youtube" title="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://tiktok.com/@twoj_profil" target="_blank" class="icon tiktok" title="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
         </div>
     </section>
+    
 
     <!-- Stopka strony -->
     <footer>
@@ -299,7 +321,14 @@ src="https://www.facebook.com/tr?id=YOUR_FACEBOOK_PIXEL_ID&ev=PageView&noscript=
                 }, 3000); // Czas przełączania obrazów ustawiony na 3000 ms (3 sekundy)
             });
         });
-    </script>    
+    </script>  
+
+    <script>
+        // Dodanie funkcjonalności rozwijania menu
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+            document.querySelector(".nav-container").classList.toggle("active");
+        });
+    </script>
     
 </body>
 </html>
