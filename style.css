@@ -25,26 +25,18 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #1c1c1c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 header .logo img {
     max-width: 150px;
     height: auto;
-}
-
-.nav-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-#nav-menu a {
-    margin: 0 15px;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-#nav-menu a:hover {
-    color: #ff6347; /* Akcentowy kolor */
 }
 
 
@@ -76,7 +68,6 @@ nav a:hover {
 nav a:hover::after {
     width: 100%;
 }
-
 
 /* Sekcja główna */
 #home {
@@ -332,17 +323,23 @@ body {
 
 /* Style animacji dla przycisków */
 .buy-now {
-    background-color: #333;
-    color: white;
     padding: 10px 20px;
+    background-color: #ff5733;
+    color: white;
+    font-size: 1.2em;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.3s ease;
 }
 
 .buy-now:hover {
-    background-color: #555;
+    background-color: #e04d2c;
+    transform: scale(1.05);
 }
+
 
 /* Media queries dla urządzeń mobilnych */
 @media (max-width: 768px) {
@@ -402,32 +399,38 @@ body {
 }
 
 /* Stylizacja dla sekcji z filmem */
+/* Stylizacja dla sekcji z filmem */
 .video-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
 .video {
-    width: 80%; /* Dostosuj szerokość filmu, jeśli jest za wąski lub za szeroki */
+    width: 90%; /* Możesz dostosować szerokość, np. 80% lub mniej, zależnie od preferencji */
     max-width: 800px;
+    border-radius: 8px; /* Zaokrąglenie rogów filmu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Lekki cień dla lepszego efektu */
+    margin-bottom: 15px;
 }
 
+/* Stylizacja dla przycisku Kup Teraz */
 .buy-now {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #ff5733; /* Kolor przycisku */
+    padding: 12px 25px;
+    background-color: #ff5733;
     color: white;
-    font-size: 1.2em;
+    font-size: 1.1em;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .buy-now:hover {
-    background-color: #e04d2c; /* Kolor przycisku po najechaniu */
+    background-color: #e04d2c;
+    transform: scale(1.05); /* Lekkie powiększenie przy najechaniu */
 }
 
 /* Stylizacja kontenera nawigacji */
