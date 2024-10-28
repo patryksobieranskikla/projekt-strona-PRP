@@ -152,7 +152,6 @@ src="https://www.facebook.com/tr?id=YOUR_FACEBOOK_PIXEL_ID&ev=PageView&noscript=
        
 </head>
 
-<body>
     <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXX"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -161,137 +160,152 @@ src="https://www.facebook.com/tr?id=YOUR_FACEBOOK_PIXEL_ID&ev=PageView&noscript=
     <!-- Nagłówek strony z logo i nawigacją -->
     <header>
         <div class="logo">
-            <img src="strona internetowa/images/1_logo.jpeg" alt="Logo">
-        </div>    
+            <img src="strona_internetowa/images/1_logo.jpeg" alt="Logo">
+        </div>
+    
+        <!-- Przyciski hamburgera -->
+        <div id="menu-toggle" class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    
+        <!-- Nawigacja -->
+        <div class="nav-container">
 
-<div class="nav-container">
-    <nav id="nav-menu">
-        <!-- Twoje linki nawigacyjne -->
-        <a href="#home">Home</a>
-        <a href="#products">Produkty</a>
-        <a href="#blog">Blog</a>
-        <a href="#about">O firmie</a>
-        <a href="#contact">Kontakt</a>
-    </nav>
-</div>   
+            <nav id="nav-menu">
+                <a href="#home">Home</a>
+                <a href="#products">Produkty</a>
+                <a href="#blog">Blog</a>
+                <a href="#about">O firmie</a>
+                <a href="#contact">Kontakt</a>
+            </nav>
 
-<!-- Przycisk hamburger menu -->
-<div class="menu-toggle" id="menu-toggle">
-    <i class="fas fa-bars"></i>
-</div>
+        </div>
 
-    </header>
+    </header>    
 
     <!-- Sekcja główna z banerem i filmem -->
 
-    <section id="home" class="video-section">
+    <section id="home" class="img-section">
         <h1>Tytanowe tłumiki motocyklowe</h1>
         <p>Wytrzymałe, lekkie i doskonałe brzmienie dla Twojego motocykla.</p>
-        <div class="video">
-            <video width="560" height="315" controls>
-                <source src="videos/film.mp4" type="video/mp4">
-                Twoja przeglądarka nie wspiera odtwarzania wideo.
-            </video>
+        <div class="img">
+            <img src="images/moto_home.png" alt="Zdjęcie tytanowego tłumika motocyklowego" style="width: 80%; max-width: 800px;">
         </div>
         <button class="buy-now">Kup Teraz</button>
-    </section>       
+    </section>
+         
     
     <!-- Sekcja produktów -->
-    <section id="products">
-        <h2>Nasze produkty</h2>
+    <section id="products" class="products-container">
+        <!-- Produkt 1 -->
+        <div class="product">
+            <h3>Model Tłumika 1</h3>
+            <p>Opis produktu...</p>
+            <div class="carousel">
+                <img class="carousel-image active" src="images/produkt_tlumik_1.png" alt="Model 1 - Zdjęcie 1">
+                <img class="carousel-image" src="images/produkt_tlumik_2.png" alt="Model 1 - Zdjęcie 2">
+                <img class="carousel-image" src="images/produkt_tlumik_3.png" alt="Model 1 - Zdjęcie 3">
+            </div>
+            <button class="buy-now">Kup teraz</button>
+        </div>
     
-        <!-- Model Tłumika 1 -->
-<div class="product">
-    <h3>Model Tłumika 1</h3>
-    <p>Opis produktu...</p>
-    <div class="carousel">
-        <img class="carousel-image" src="images/produkt_tlumik_1.png" alt="Model 1 - Zdjęcie 1">
-        <img class="carousel-image" src="images/produkt_tlumik_2.png" alt="Model 1 - Zdjęcie 2" style="display:none;">
-        <img class="carousel-image" src="images/produkt_tlumik_3.png" alt="Model 1 - Zdjęcie 3" style="display:none;">
-    </div>
-    <button class="buy-now">Kup teraz</button>
-</div>
-
-<!-- Model Tłumika 2 -->
-<div class="product">
-    <h3>Model Tłumika 2</h3>
-    <p>Opis produktu...</p>
-    <div class="carousel">
-        <img class="carousel-image" src="images/produkt_tlumik_4.png" alt="Model 2 - Zdjęcie 1">
-        <img class="carousel-image" src="images/produkt_tlumik_5.png" alt="Model 2 - Zdjęcie 2" style="display:none;">
-        <img class="carousel-image" src="images/produkt_tlumik_6.png" alt="Model 2 - Zdjęcie 3" style="display:none;">
-    </div>
-    <button class="buy-now">Kup teraz</button>
-</div>
-
-<!-- Model Tłumika 3 -->
-<div class="product">
-    <h3>Model Tłumika 3</h3>
-    <p>Opis produktu...</p>
-    <div class="carousel">
-        <img class="carousel-image" src="images/produkt_tlumik_7.png" alt="Model 3 - Zdjęcie 1">
-        <img class="carousel-image" src="images/produkt_tlumik_8.png" alt="Model 3 - Zdjęcie 2" style="display:none;">
-        <img class="carousel-image" src="images/produkt_tlumik_9.png" alt="Model 3 - Zdjęcie 3" style="display:none;">
-    </div>
-    <button class="buy-now">Kup teraz</button>
-</div>
+        <!-- Produkt 2 -->
+        <div class="product">
+            <h3>Model Tłumika 2</h3>
+            <p>Opis produktu...</p>
+            <div class="carousel">
+                <img class="carousel-image active" src="images/produkt_1.jpeg" alt="Model 2 - Zdjęcie 1">
+                <img class="carousel-image" src="images/produkt_2.jpeg" alt="Model 2 - Zdjęcie 2">
+                <img class="carousel-image" src="images/produkt_3.jpeg" alt="Model 2 - Zdjęcie 3">
+            </div>
+            <button class="buy-now">Kup teraz</button>
+        </div>
+    
+        <!-- Produkt 3 -->
+        <div class="product">
+            <h3>Model Tłumika 3</h3>
+            <p>Opis produktu...</p>
+            <div class="carousel">
+                <img class="carousel-image active" src="images/rura_1.jpeg" alt="Model 3 - Zdjęcie 1">
+                <img class="carousel-image" src="images/rura_2.jpeg" alt="Model 3 - Zdjęcie 2">
+                <img class="carousel-image" src="images/rura_3.jpeg" alt="Model 3 - Zdjęcie 3">
+            </div>
+            <button class="buy-now">Kup teraz</button>
+        </div>
 
     </section>
+    
 
     <!-- Sekcja bloga -->
     <section id="blog">
         <h2>Blog</h2>
         <p>Bądź na bieżąco z naszymi nowymi artykułami i poradami.</p>
+
         <div class="blog-posts">
             <article class="blog-post">
-                <h3>Tytuł artykułu 1</h3>
-                <p>Krótki opis artykułu...</p>
-                <a href="URL_DO_ARTYKULU_1" class="read-more">Czytaj więcej</a>
+                <img src="images/blog1.jpg" alt="Tytuł artykułu 1">
+                <div class="post-content">
+                    <h3>Tytuł artykułu 1</h3>
+                    <p>Krótki opis artykułu...</p>
+                    <a href="URL_DO_ARTYKULU_1" class="read-more">Czytaj więcej</a>
+                </div>
             </article>
-            <article class="blog-post">
-                <h3>Tytuł artykułu 2</h3>
-                <p>Krótki opis artykułu...</p>
-                <a href="URL_DO_ARTYKULU_2" class="read-more">Czytaj więcej</a>
-            </article>
-        </div>
+            <!-- Dodaj kolejne artykuły w ten sam sposób -->
+        </div>        
+
     </section>    
 
     <!-- Sekcja o firmie -->
     <section id="about">
         <h2>O firmie</h2>
         <p>Nasza misja to dostarczanie najwyższej jakości tłumików z tytanu.</p>
-    </section>
-
+        <div class="video-container">
+            <video width="80%" height="400" controls>
+                <source src="videos/film.mp4" type="video/mp4">
+                Twoja przeglądarka nie wspiera odtwarzania wideo.
+            </video>
+        </div>
+    </section>    
+    
     <!-- Sekcja kontaktu -->
     <section id="contact">
+
         <h2>Kontakt</h2>
+
         <p>Masz pytania? Skontaktuj się z nami:</p>
+
         <div class="contact-icons">
-            <a href="mailto:twoj_email@example.com" class="icon email" title="Email">
+            <a href="mailto: polish.racing.power@gmail.com" class="icon email" title="Email">
                 <i class="fas fa-envelope"></i>
             </a>
-            <a href="https://m.me/twoj_messenger" target="_blank" class="icon messenger" title="Messenger">
+
+            <a href="https://m.me/PRPExhaust" target="_blank" class="icon messenger" title="Messenger">
                 <i class="fab fa-facebook-messenger"></i>
             </a>
-            <a href="https://facebook.com/twoj_profil" target="_blank" class="icon facebook" title="Facebook">
-                <i class="fab fa-facebook-f"></i>
+
+            <a href="https://m.me/61560966670274" target="_blank" class="icon messenger" title="Messenger">
+                <i class="fab fa-facebook-messenger"></i>
             </a>
-            <a href="https://instagram.com/twoj_profil" target="_blank" class="icon instagram" title="Instagram">
+            
+            <a href="https://www.instagram.com/prp_exhaust" target="_blank" class="icon instagram" title="Instagram">
                 <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://youtube.com/twoj_profil" target="_blank" class="icon youtube" title="YouTube">
+            
+            <a href="https://www.youtube.com/@TomaszRacing" target="_blank" class="icon youtube" title="YouTube">
                 <i class="fab fa-youtube"></i>
             </a>
-            <a href="https://tiktok.com/@twoj_profil" target="_blank" class="icon tiktok" title="TikTok">
+
+            <a href="https://www.tiktok.com/@prp_exhaust" target="_blank" class="icon tiktok" title="TikTok">
                 <i class="fab fa-tiktok"></i>
             </a>
         </div>
+
     </section>
     
 
     <!-- Stopka strony -->
     <footer>
-        <p>&copy; 2024 Nasza Firma - Wszystkie prawa zastrzeżone.</p>
+        <p>&copy; 2024 PRP- Polish Racing Power - Wszystkie prawa zastrzeżone.</p>
     </footer>
 
     <div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 20px; right: 20px; background: #333; color: white; padding: 20px; text-align: center; z-index: 1000; border-radius: 5px;">
@@ -321,12 +335,74 @@ src="https://www.facebook.com/tr?id=YOUR_FACEBOOK_PIXEL_ID&ev=PageView&noscript=
         });
     </script>  
 
-    <script>
-        // Dodanie funkcjonalności rozwijania menu
-        document.getElementById("menu-toggle").addEventListener("click", function() {
-            document.querySelector(".nav-container").classList.toggle("active");
-        });
-    </script>
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+    });
+</script>
+
+<script>
+    // Dodanie funkcjonalności rozwijania menu
+    document.getElementById("menu-toggle").addEventListener("click", function() {
+        document.querySelector(".nav-container").classList.toggle("active");
+    });
+</script>
     
+<!-- Inne elementy HTML -->
+
+<script>
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            else {
+                entry.target.classList.add('visible');
+                appearOnScroll.unobserve(entry.target);
+            }
+        });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+</script>
+
+<script>
+    document.getElementById("menu-toggle").addEventListener("click", function() {
+        document.querySelector(".nav-container").classList.toggle("active");
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Pobieramy wszystkie elementy karuzeli
+        const carousels = document.querySelectorAll('.carousel');
+
+        // Funkcja uruchamiająca karuzelę dla każdego zestawu obrazów
+        carousels.forEach((carousel) => {
+            let index = 0;
+            const images = carousel.querySelectorAll('.carousel-image');
+            images[index].classList.add('active'); // Ustawiamy pierwszy obraz jako widoczny
+
+            // Funkcja zmiany obrazu
+            setInterval(() => {
+                images[index].classList.remove('active'); // Usuwamy klasę 'active' z bieżącego obrazu
+                index = (index + 1) % images.length; // Przechodzimy do następnego obrazu
+                images[index].classList.add('active'); // Dodajemy klasę 'active' do nowego obrazu
+            }, 3000); // Czas przełączania obrazów ustawiony na 3000 ms (3 sekundy)
+        });
+    });
+</script>
+
 </body>
+
 </html>
