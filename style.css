@@ -3,96 +3,138 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Zamieniamy na bardziej nowoczesny font */
+    scroll-behavior: smooth; /* Dodaje płynne przewijanie */
 }
 
 body {
-    background-color: #121212;
-    color: #ffffff;
+    background: linear-gradient(135deg, #121212, #1a1a1a);
+    color: #f0f0f0;
+    font-size: 16px;
+    line-height: 1.6;
 }
+
 
 /* Styl nagłówka i nawigacji */
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #222;
+    padding: 15px 20px;
+    background-color: #1c1c1c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 header .logo img {
-    width: 100px;
+    max-width: 150px;
+    height: auto;
 }
+
 
 nav a {
     margin: 0 15px;
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff6347;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
 }
 
 nav a:hover {
-    color: #ff6347; /* Akcentowy kolor */
+    color: #ff6347;
 }
+
+nav a:hover::after {
+    width: 100%;
+}
+
 
 /* Sekcja główna */
 #home {
     text-align: center;
-    padding: 50px 20px;
+    padding: 60px 20px;
+    background: linear-gradient(145deg, #1c1c1c, #121212);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 #home h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    color: #ff6347;
 }
 
 #home p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+    font-size: 1.3em;
+    margin-bottom: 25px;
+    color: #cccccc;
 }
 
 #home .buy-now {
-    padding: 10px 20px;
+    padding: 12px 25px;
     background-color: #ff6347;
     color: #ffffff;
     border: none;
-    border-radius: 5px;
-    font-size: 1em;
+    border-radius: 25px;
+    font-size: 1.1em;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #home .buy-now:hover {
     background-color: #ff4500;
+    transform: translateY(-2px);
 }
 
 #home .video iframe {
     margin-top: 20px;
     width: 80%;
-    max-width: 560px;
-    height: 315px;
-    border: none;
+    max-width: 640px;
+    height: 360px;
+    border: 2px solid #333;
+    border-radius: 10px;
 }
+
 
 /* Sekcja produktów */
 #products {
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
+    background-color: #1a1a1a;
 }
 
 #products h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #ff6347;
+    margin-bottom: 25px;
 }
 
 .product {
     display: inline-block;
-    width: 300px;
+    width: 280px;
     margin: 20px;
-    background-color: #333;
-    border-radius: 8px;
+    background-color: #2e2e2e;
+    border-radius: 15px;
     padding: 20px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .product img {
@@ -103,28 +145,31 @@ nav a:hover {
 
 .product h3 {
     font-size: 1.5em;
+    color: #ff6347;
     margin: 15px 0;
 }
 
 .product p {
     font-size: 1em;
+    color: #cccccc;
     margin-bottom: 15px;
 }
 
 .product .buy-now {
-    padding: 8px 15px;
+    padding: 10px 20px;
     background-color: #ff6347;
     color: #ffffff;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .product .buy-now:hover {
     background-color: #ff4500;
 }
+
 
 /* Sekcja bloga */
 #blog {
@@ -150,29 +195,34 @@ nav a:hover {
 
 /* Sekcja kontaktu */
 #contact {
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
+    background-color: #1c1c1c;
 }
 
 #contact h2 {
-    font-size: 2em;
+    font-size: 2.5em;
+    color: #ff6347;
     margin-bottom: 20px;
 }
 
 .contact-options a, .social-media a {
     display: inline-block;
     margin: 10px;
-    padding: 10px 15px;
+    padding: 12px 18px;
     background-color: #333;
     color: #ffffff;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
 }
 
 .contact-options a:hover, .social-media a:hover {
     background-color: #ff6347;
+    transform: translateY(-2px);
 }
+
 
 /* Stopka */
 footer {
@@ -234,3 +284,104 @@ body {
         font-size: 1rem;
     }
 }
+
+/* Style animacji dla przycisków */
+.buy-now {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-now:hover {
+    background-color: #555;
+}
+
+/* Media queries dla urządzeń mobilnych */
+@media (max-width: 768px) {
+    header nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .product {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .video iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 300px; /* Możesz dostosować do szerokości, jaką chcesz */
+    height: auto;
+    overflow: hidden;
+}
+
+.carousel-image {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.carousel-image.active {
+    opacity: 1;
+    position: relative;
+}
+
+/* Stylizacja dla sekcji głównej */
+#home {
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+#home h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+#home p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Stylizacja dla sekcji z filmem */
+.video-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.video {
+    width: 80%; /* Dostosuj szerokość filmu, jeśli jest za wąski lub za szeroki */
+    max-width: 800px;
+}
+
+.buy-now {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff5733; /* Kolor przycisku */
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.buy-now:hover {
+    background-color: #e04d2c; /* Kolor przycisku po najechaniu */
+}
+

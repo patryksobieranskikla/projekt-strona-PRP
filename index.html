@@ -9,6 +9,12 @@
     <meta name="description" content="Tytanowe tłumiki motocyklowe - trwałe, lekkie, o wysokiej jakości dźwięku.">
     <title>Nasza Firma - Tytanowe Tłumiki Motocyklowe</title>
 
+        <!-- Link do Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+        <!-- Link do CSS -->
+        <link rel="stylesheet" href="style.css">
+
     <!-- Tagi hreflang -->
     <link rel="alternate" href="https://twojafirma.pl" hreflang="pl">
     <link rel="alternate" href="https://twojafirma.com/en" hreflang="en">
@@ -169,44 +175,78 @@ src="https://www.facebook.com/tr?id=YOUR_FACEBOOK_PIXEL_ID&ev=PageView&noscript=
     </header>
 
     <!-- Sekcja główna z banerem i filmem -->
-    <section id="home">
+
+    <section id="home" class="video-section">
         <h1>Tytanowe tłumiki motocyklowe</h1>
         <p>Wytrzymałe, lekkie i doskonałe brzmienie dla Twojego motocykla.</p>
-        <button class="buy-now">Kup Teraz</button>
         <div class="video">
-            <iframe width="560" height="315" src="URL_DO_FILMU" title="Film o produkcie" frameborder="0" allowfullscreen></iframe>
+            <video controls>
+                <source src="images/nazwa_pliku.mp4" type="video/mp4">
+                Twoja przeglądarka nie wspiera odtwarzania wideo.
+            </video>
         </div>
-    </section>
-
+        <button class="buy-now">Kup Teraz</button>
+    </section>       
+    
     <!-- Sekcja produktów -->
     <section id="products">
         <h2>Nasze produkty</h2>
-        <div class="product">
-            <img src="URL_DO_OBRAZU_TLUMIKA_1" alt="Model 1">
-            <h3>Model Tłumika 1</h3>
-            <p>Opis produktu...</p>
-            <button class="buy-now">Kup teraz</button>
-        </div>
-        <div class="product">
-            <img src="URL_DO_OBRAZU_TLUMIKA_2" alt="Model 2">
-            <h3>Model Tłumika 2</h3>
-            <p>Opis produktu...</p>
-            <button class="buy-now">Kup teraz</button>
-        </div>
-        <div class="product">
-            <img src="URL_DO_OBRAZU_TLUMIKA_3" alt="Model 3">
-            <h3>Model Tłumika 3</h3>
-            <p>Opis produktu...</p>
-            <button class="buy-now">Kup teraz</button>
-        </div>
+    
+        <!-- Model Tłumika 1 -->
+<div class="product">
+    <h3>Model Tłumika 1</h3>
+    <p>Opis produktu...</p>
+    <div class="carousel">
+        <img class="carousel-image" src="images/produkt_tlumik_1.png" alt="Model 1 - Zdjęcie 1">
+        <img class="carousel-image" src="images/produkt_tlumik_2.png" alt="Model 1 - Zdjęcie 2" style="display:none;">
+        <img class="carousel-image" src="images/produkt_tlumik_3.png" alt="Model 1 - Zdjęcie 3" style="display:none;">
+    </div>
+    <button class="buy-now">Kup teraz</button>
+</div>
+
+<!-- Model Tłumika 2 -->
+<div class="product">
+    <h3>Model Tłumika 2</h3>
+    <p>Opis produktu...</p>
+    <div class="carousel">
+        <img class="carousel-image" src="images/produkt_tlumik_4.png" alt="Model 2 - Zdjęcie 1">
+        <img class="carousel-image" src="images/produkt_tlumik_5.png" alt="Model 2 - Zdjęcie 2" style="display:none;">
+        <img class="carousel-image" src="images/produkt_tlumik_6.png" alt="Model 2 - Zdjęcie 3" style="display:none;">
+    </div>
+    <button class="buy-now">Kup teraz</button>
+</div>
+
+<!-- Model Tłumika 3 -->
+<div class="product">
+    <h3>Model Tłumika 3</h3>
+    <p>Opis produktu...</p>
+    <div class="carousel">
+        <img class="carousel-image" src="images/produkt_tlumik_7.png" alt="Model 3 - Zdjęcie 1">
+        <img class="carousel-image" src="images/produkt_tlumik_8.png" alt="Model 3 - Zdjęcie 2" style="display:none;">
+        <img class="carousel-image" src="images/produkt_tlumik_9.png" alt="Model 3 - Zdjęcie 3" style="display:none;">
+    </div>
+    <button class="buy-now">Kup teraz</button>
+</div>
+
     </section>
 
     <!-- Sekcja bloga -->
     <section id="blog">
         <h2>Blog</h2>
         <p>Bądź na bieżąco z naszymi nowymi artykułami i poradami.</p>
-        <!-- Lista artykułów bloga do wypełnienia później -->
-    </section>
+        <div class="blog-posts">
+            <article class="blog-post">
+                <h3>Tytuł artykułu 1</h3>
+                <p>Krótki opis artykułu...</p>
+                <a href="URL_DO_ARTYKULU_1" class="read-more">Czytaj więcej</a>
+            </article>
+            <article class="blog-post">
+                <h3>Tytuł artykułu 2</h3>
+                <p>Krótki opis artykułu...</p>
+                <a href="URL_DO_ARTYKULU_2" class="read-more">Czytaj więcej</a>
+            </article>
+        </div>
+    </section>    
 
     <!-- Sekcja o firmie -->
     <section id="about">
@@ -239,6 +279,27 @@ src="https://www.facebook.com/tr?id=YOUR_FACEBOOK_PIXEL_ID&ev=PageView&noscript=
         <button onclick="acceptCookies()">Akceptuję</button>
         <button onclick="declineCookies()">Odrzuć</button>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Pobieramy wszystkie elementy karuzeli
+            const carousels = document.querySelectorAll('.carousel');
+    
+            // Funkcja uruchamiająca karuzelę dla każdego zestawu obrazów
+            carousels.forEach((carousel) => {
+                let index = 0;
+                const images = carousel.querySelectorAll('.carousel-image');
+                images[index].classList.add('active'); // Ustawiamy pierwszy obraz jako widoczny
+    
+                // Funkcja zmiany obrazu
+                setInterval(() => {
+                    images[index].classList.remove('active'); // Usuwamy klasę 'active' z bieżącego obrazu
+                    index = (index + 1) % images.length; // Przechodzimy do następnego obrazu
+                    images[index].classList.add('active'); // Dodajemy klasę 'active' do nowego obrazu
+                }, 3000); // Czas przełączania obrazów ustawiony na 3000 ms (3 sekundy)
+            });
+        });
+    </script>    
     
 </body>
 </html>
