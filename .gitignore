@@ -1,0 +1,28 @@
+# Pliki systemowe Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+System Volume Information/
+
+# Katalogi użytkownika Windows
+/3D Objects/
+/Contacts/
+/Desktop/
+/Documents/
+/Downloads/
+/Favorites/
+/Links/
+/Music/
+/OneDrive/
+/Pictures/
+/Saved Games/
+/Searches/
+/Videos/
+AppData/
+
+# Inne katalogi, które chcesz wykluczyć
+.cache/
+.vscode/
+.bash_history
+.gitconfig
