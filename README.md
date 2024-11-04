@@ -1,6 +1,3 @@
-![Logo firmy](images/logo_prp.png)
-# projekt-strona-PRP
-
 ## Zależności
 
 Ten projekt korzysta z następujących bibliotek open-source, które są częścią ekosystemu Pallets:
